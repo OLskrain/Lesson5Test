@@ -3,7 +3,7 @@
  *
  * @author Andrey Ievlev.
  * @version Dec 8, 2017.
- * @link Null.
+ * @link https://github.com/OLskrain/Lesson5Test.git.
  */
 
 public class Lesson5Test {
