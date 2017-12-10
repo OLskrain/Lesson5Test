@@ -14,9 +14,9 @@ public class Lesson5Test {
 
         fellowWorker.setFull_name("Romanov Denis Petrovich");
         System.out.println(fellowWorker.getFull_name());
-        
-        fellowWorker.voice();
-        fellowWorker1.voice();
+
+        System.out.println(fellowWorker.toString());
+        System.out.println(fellowWorker1.toString());
         System.out.println();
 
         //Task 4-5
@@ -28,9 +28,9 @@ public class Lesson5Test {
         persArray[4] = new FellowWorker("Nikitina Nina", "Programmer", "HikNin@mail.com", "+79051475532", "70000p.", 25);
 
         System.out.println("Employees over 40 years of age:");
-        for(int i = 0; i < persArray.length; i++){
-            if(persArray[i].getAge() > 40){
-                persArray[i].voice();
+        for(FellowWorker fellow : persArray){
+            if(fellow.getAge() > 40){
+                System.out.println(fellow);
             }
         }
     }
@@ -57,9 +57,9 @@ class FellowWorker{
         this.salary = salary;
         this.age = age;
     }
-
-    void voice(){
-        System.out.println(full_name + ", " + post + " " + email + ", " + phone + ", " + salary + ", " + age);
+    @Override
+    public String toString(){
+        return (full_name + ", " + post + " " + email + ", " + phone + ", " + salary + ", " + age);
     }
     void setFull_name(String full_name){
         this.full_name = full_name;
